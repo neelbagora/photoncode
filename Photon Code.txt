@@ -40,7 +40,8 @@ void publishData() {
     //      "h": ##.#
     //      "p": ##.#
     //  }
-    snprintf(payload, sizeof(payload), "{ \"t\": %.1f, \"h\": %.1f,  \"p\": %.1f}", t, h, p * 0.001);
+    snprintf(payload, sizeof(payload), "{ \"t\": %.1f, \"h\": %.1f,  \"p\": %.1f}", 
+    t, h, p * 0.001);
     Particle.publish("climate", payload, 60);
 }
 
